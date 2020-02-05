@@ -1,0 +1,223 @@
+.UploadFile{
+    &_icon{
+        color: @primary-color;
+        font-size: @font-size-64 !important;
+    }
+    &_text{
+        font-weight: 600;
+    }
+    &_img{
+        width: 70px;
+        height: 70px;
+    }
+    &_button{
+        margin-top: 15px;
+    }
+}
+
+.valueChanger{
+    &_main{
+        position:absolute !important;
+        right:26px;
+        display: flex !important;
+        align-items:center
+    }
+    &_button{
+        font-size:24px;
+        float:left;
+        color: @primary-color !important;
+    }
+    &_button_disabled{
+        font-size:24px;
+        float:left;
+        color:rgba(0,0,0,0.25) !important;
+        cursor: not-allowed !important;
+    }
+    &_input{
+        width: 36px !important;
+        height: 32px !important;
+        margin:0 20px !important;
+        font-size:12px;
+        float:left;
+        text-align:center;
+        padding:0;
+        font-family:'SF UI Text Regular', sans-serif !important; 
+    }
+}
+
+.buttons{
+    &_parent{
+        width: 100%;
+        height: 32px;
+        position: relative;
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_value{
+        font-family:'SF UI Text Regular', sans-serif !important;
+        font-size:14px;
+        margin:0;
+        :global(.ant-input){
+            color: transparent;
+            text-shadow: 0 0 0 #344252;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    &_error{
+        font-family:'SF UI Text Regular', sans-serif !important;
+        font-size:14px;
+        margin:0;
+        :global(.ant-input){
+            border-color: #f5222d;
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 0 2px rgba(245, 34, 45, 0.2);
+            }
+            &:hover {
+                border-color: #f5222d !important;
+              }
+        }
+    }
+    &_icon{
+        &_error{
+            color: rgb(245, 34, 45);
+        }
+    }
+}
+
+.list{
+    min-width:300px;
+    position: absolute !important;
+    background: @white-color;
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.listItem{
+    &_main{
+        display: flex !important;
+        position:relative;
+        height:72px
+    }
+    &_value{
+        position:absolute;
+        left:20px;
+        font-family:'SF UI Text Regular', sans-serif !important;
+        font-size:14px;
+        color: #344252    
+    }
+    &_error{
+        margin-left:5px;
+        margin-top:3px;
+        color: rgb(245, 34, 45);
+        margin-bottom: -50px;
+        font-family:'SF UI Text Regular', sans-serif !important;
+        font-size:14px;
+   
+    }
+}
+
+.CustomSelect{
+    &_icon{
+        padding-top: 2px;
+        margin-Left: 8px;
+        color: #858D97;
+        height: 14.25px !important;
+        width: 12px !important;
+        font-size: 14px !important;
+    }
+    :global(.ant-select-selection-selected-value){
+        text-overflow: clip !important;
+        max-width: 95% !important;
+    }
+}
+
+
+// Select Airline CSS
+.selectAirlineComponent {
+    &_bg {
+        float: right !important;
+        cursor: pointer !important;
+        position: relative;
+    }
+    &_selected_values {
+        width: 100%;
+        height: 32px;
+        font-size: @font-size-14;
+        color: rgba(0, 0, 0, 0.65);
+        border: 1px solid #d9d9d9;
+        border-radius: 4px;
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        padding-left: 11px;
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        transition: border 0.3s;
+        transition: box-shadow 0.3s;
+        &:hover {
+            color: rgba(0, 0, 0, 0.65);
+            border: 1px solid #3e93de;
+        }
+    }
+    &_selectedState {
+        width: 100%;
+        height: 32px;
+        border: 1px solid #3e93de;
+        box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+        font-size: @font-size-14;
+        color: rgba(0, 0, 0, 0.65);
+        border-radius: 4px;
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        padding-left: 11px;
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        transition: box-shadow 0.3s;
+        &:hover {
+            color: rgba(0, 0, 0, 0.65);
+        }
+    }
+    &_list {
+        width: 100%;
+        min-width: 195px;
+        padding: 14px 20px 8px !important;
+        position: absolute !important;
+        left: 0;
+        cursor: default;
+
+        &_inner {
+            margin-top: 3px !important;
+            margin-left: 25px !important;
+        }
+        
+        label {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 9px;
+        }
+    }
+}

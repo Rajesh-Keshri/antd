@@ -1,0 +1,93 @@
+.FormFactory{
+  &_label{
+    &_text{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-all;
+      white-space: nowrap;
+      display: block;
+    }
+    &_starIcon{
+      color:#f5222d;
+      display: block;
+    }
+  }
+
+  &_radioGroup{
+    display: block !important;
+    clear:left;
+    &_radioBtn{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-all;
+      white-space: nowrap;
+      display: block;
+      margin-top: 5px !important;
+    }
+  }
+
+  &_checkBox{
+    &_check{
+      color: @primary-text-color;
+      font-weight: 500;
+    }
+    &_alert{
+      position: absolute;
+      top: 0;
+      &__custom{
+        color:@primary-color;
+        color: #1976D2;
+        margin-left: 12px;
+        font-size: @font-size-20 !important;
+        margin-top: 1px;
+      }
+    }
+  }
+
+  &_datePicker{
+    display:block
+  }
+
+  &_select{
+    display: block;
+    width: 100% !important;
+    :global(.ant-select-selection){
+      display: flex !important;
+      align-items: center;
+      //height: 40px;
+    }
+  }
+
+  &_switch{
+    display: block;
+    top: 20px;
+    left: 0;
+    position: absolute;
+  }
+
+  //&_input{
+  //  height: 40px !important;
+  //}
+}
+
+
+:global(.ant-form-item-label) {
+    padding-bottom: 0 !important;
+    float: left;
+
+    > label{
+      &:global(.ant-form-item-required){
+        &:before{
+          display: none;
+        }
+      }
+      color: @heading-color !important;
+    }
+}
+
+:global(.ant-form-item-children){
+  display: block;
+}
+:global(.ant-calendar){
+  width: 100% !important;
+}

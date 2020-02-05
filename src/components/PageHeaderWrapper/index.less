@@ -1,0 +1,67 @@
+@import '~antd/lib/style/themes/default.less';
+
+:global(.ant-page-header-title-view-extra),
+:global(.ant-page-header-heading-extra){
+  top: 45px !important;
+  right: 24px !important;
+}
+
+:global(.ant-page-header-title-view){
+  display: flex !important;
+  width:100%;
+  justify-content: space-between;	
+  :global(.ant-page-header-title-view-title){
+    font-size: @font-size-20 !important;
+    font-weight: 600 !important;
+    color: @primary-text-color;
+  } 
+}
+
+.content {
+  margin: 0 0 0;
+}
+
+
+
+@media screen and (max-width: @screen-sm) {
+  .content {
+    margin: 0 0 0;
+  }
+}
+
+.process_steps {
+  &_bg {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #FAFAFA;
+    border-bottom: 1px solid #D4D4D4; 
+    position: relative;
+    transition: height 0.3s;
+  }
+  &_show_hide_btn {
+    width: 50px;
+    height: 25px;
+    background: #FAFAFA;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -25px;
+    right: 25px;
+    z-index: 1;
+    cursor: pointer;
+    border-top: 1px solid #FAFAFA;
+    border-left: 1px solid #D4D4D4;
+    border-right: 1px solid #D4D4D4; 
+    border-bottom: 1px solid #D4D4D4;
+    border-radius: 0 0 4px 4px;
+
+    span {
+      font-size: 24px;
+      color: #858D97;
+    }
+  }
+}

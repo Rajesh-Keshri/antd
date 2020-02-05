@@ -1,0 +1,1 @@
+export const UNSVDMSSG_SAMPLEPAGE = 'samplePage';

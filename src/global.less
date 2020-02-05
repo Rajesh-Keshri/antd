@@ -1,0 +1,166 @@
+@import '~ant-design-pro/dist/ant-design-pro.css';
+
+@font-face {
+    font-family: 'SF UI Text Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SF UI Text Regular'), url('./assets/fonts/SFUIText-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SF UI Text Semibold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SF UI Text Semibold'), url('./assets/fonts/SFUIText-Semibold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'SF UI Text Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SF UI Text Medium'), url('./assets/fonts/SFUIText-Medium.woff') format('woff');
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+.colorWeak {
+    filter: invert(80%);
+}
+
+.ant-layout {
+    min-height: 100vh;
+}
+
+canvas {
+    display: block;
+}
+
+body {
+    font-family: 'SF UI Text Regular', sans-serif !important;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-variant: none !important;
+    overflow-x: auto !important;
+}
+// Scroll Bar
+body::-webkit-scrollbar {
+    width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.globalSpin {
+    width: 100%;
+    margin: 40px 0 !important;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+// Ant Theme
+.ant-layout-sider, .ant-menu-dark, .ant-menu-item-selected {
+    background: @layout-sider-background !important;
+}
+
+// Btns.
+.ant-btn-primary {
+    background-color: @primary-color !important;
+}
+
+.ant-btn-primary[disabled]{
+    background-color: #f5f5f5 !important;
+}
+
+// Menu Breadcrumb
+.ant-breadcrumb {
+    a {
+        color: rgba(0, 0, 0, .45);
+        transition: color .3s;
+    }
+}
+
+.ant-drawer-body {
+    padding: 0 !important;
+}
+
+:global(.ant-modal-close-x) {
+    padding-right: 8px;
+    padding-top: 9px;
+    font-size: @font-size-20;
+    color: @primary-text-color;
+
+    i {
+        font-size: @font-size-20;
+    }
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 600 !important;
+    color: @primary-text-color;
+}
+
+.ant-radio-button-wrapper-checked {
+    background-color: transparent !important;
+}
+
+.ant-btn {
+    min-width: 136px;
+    font-weight: 500 !important;
+}
+
+.ant-page-header {
+    background-color: rgb(255, 255, 255) !important;
+}
+
+.ant-page-header-heading-title {
+    font-size: @font-size-20 !important;
+    color: rgba(0, 0, 0, 0.85) !important;
+}
+
+:global(.ant-select-search__field__mirror) {
+    opacity: 1 !important;
+}
+
+:global(.ant-layout.ant-layout-has-sider > .ant-layout) {
+    overflow-x: initial !important;
+}
+
+// Process Steps
+:global(.ant-steps-small .ant-steps-item-title) {
+    font-family: 'SF UI Text Regular', sans-serif !important;
+    font-size: 12px !important;
+}
+
+// Select Tree
+:global(.ant-select-tree li span.ant-select-tree-switcher) {
+    display: none !important;
+}
+
+:global(.ant-select-selection--multiple .ant-select-selection__choice__remove) {
+    display: none !important;
+}
+
+:global(.ant-select-tree li) {
+    padding-left: 10px !important;
+}
+
+:global(.ant-select-selection--multiple .ant-select-selection__choice) {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 5px !important;
+}
+
+:global(.anticon){
+    color: rgba(0, 0, 0, 0.25)
+}

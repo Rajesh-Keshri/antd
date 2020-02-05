@@ -1,0 +1,1 @@
+export const selectSampleData = ({sampleDataModel: {listing}}) => listing;
