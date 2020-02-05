@@ -44,4 +44,4 @@ Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for details on our code of cond
 
 ## Authors
 
-* **SHJ TEAM 3**
+* **SHJ DEVELOPMENT TEAM**
