@@ -19,6 +19,22 @@
 
 .content {
   margin: 0 0 0;
+  height: calc(100vh - 153px);
+  overflow-y: scroll;
+  // padding: 25px;
+
+  &::-webkit-scrollbar {
+      width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+      background: #FFF;
+  }
+
+  &::-webkit-scrollbar-thumb {
+      background: rgba(115,111,111,0.54);
+      border-right: 2px solid #fff;
+  }
 }
 
 

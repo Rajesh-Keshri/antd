@@ -60,7 +60,7 @@ class PageHeaderWrapper extends Component {
     return (
       <div
         data-test="wrapper-component"
-        style={{ margin: '-24px -24px 0' }}
+        style={{ margin: '-24px -24px 0', height: 'calc(100vh - 64px)' }}
         className={`headerwrapper_container ${wrapperClassName}`}
       >
         {top}
