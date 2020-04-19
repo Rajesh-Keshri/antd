@@ -1,30 +1,44 @@
-import { GLOBAL_MODEL } from '@/actions/action.types';
-import { getRequest } from '@/services/commonReq';
-import { selectSampleData } from '@/selectors/sample.selectors'
-
-import {API_FETCH_FLIGHTS} from '@/utils/constants';
-
 export default {
-  namespace: GLOBAL_MODEL,
+  namespace: 'global',
 
   state: {
     entityResponse: [],
+    collapsed: false,
+    modalVisible: false,
+    notices: [],
+    actionMode:'',
   },
 
   effects: {
-    *fetch({payload}, {call, put, select}) {
-      const response = yield call(getRequest, API_FETCH_FLIGHTS, payload);
-      yield put({ type: 'updateFetchResult', payload: response.list });
-      return yield select(selectSampleData);
+    *toggleModal(_, {put, select}) {
+      const modalVisible = yield select( state => state.global.modalVisible)
+      yield put({ type: 'changeModalState', payload: !modalVisible });
     },
   },
 
   reducers: {
-    updateFetchResult(state, action) {
+    changeModalState(state, {payload}) {
       return {
         ...state,
-        entityResponse: action.payload,
+        modalVisible: payload
+      }
+    },
+    changeLayoutCollapsed(state, { payload }) {
+      return {
+        ...state,
+        collapsed: payload,
       };
     }
-  }
+  },
+
+  subscriptions: {
+    setup({ history }) {
+      // Subscribe history(url) change, trigger `load` action if pathname is `/`
+      return history.listen(({ pathname, search }) => {
+        if (typeof window.ga !== 'undefined') {
+          window.ga('send', 'pageview', pathname + search);
+        }
+      });
+    },
+  },
 };
