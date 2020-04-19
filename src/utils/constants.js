@@ -1,5 +1,3 @@
-import { countries } from 'countries-list';
-
 // API SERVICE
 export const API_SERVICE_SAMPLE = 'api/boilerplate.sample';
 

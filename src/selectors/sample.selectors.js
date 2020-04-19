@@ -1,1 +1,1 @@
-export const selectSampleData = ({sampleDataModel: {listing}}) => listing;
+export const selectSampleData = ({sampleModel: {listing}}) => listing;

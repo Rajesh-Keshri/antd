@@ -1,5 +1,5 @@
 import { 
-  SAMPLE_DATA_MODEL,
+  SAMPLE_PAGE_EFFECT,
 } from './action.types';
 
-export const fetchSampleData = () => ({ type: SAMPLE_DATA_MODEL });
+export const fetchSampleData = (payload) => ({ type: SAMPLE_PAGE_EFFECT, payload });

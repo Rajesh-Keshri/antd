@@ -1,14 +1,14 @@
-import { GLOBAL_MODEL } from '@/actions/action.types';
+import { SAMPLE_MODEL } from '@/actions/action.types';
 import { getRequest } from '@/services/commonReq';
 import { selectSampleData } from '@/selectors/sample.selectors'
 
 import {API_FETCH_FLIGHTS} from '@/utils/constants';
 
 export default {
-  namespace: GLOBAL_MODEL,
+  namespace: SAMPLE_MODEL,
 
   state: {
-    entityResponse: [],
+    listing: [],
   },
 
   effects: {
@@ -23,7 +23,7 @@ export default {
     updateFetchResult(state, action) {
       return {
         ...state,
-        entityResponse: action.payload,
+        listing: action.payload,
       };
     }
   }
